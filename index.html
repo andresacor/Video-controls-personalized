@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video controls personalized</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/c1df30177c.js"></script>
+
+</head>
+<body>
+    <div class="video-container">
+        <video width='640' class="video expand"  poster="img/john-wick-3.jpg" id='video'>
+            <source src='videos/John Wick_Chapter_3.mp4' type='video/mp4'>
+            <source src='videos/John Wick_Chapter_3.ogv' type='video/ogv'>
+            Su navegador no soporta la etiqueta video    
+        </video>
+        <div class="container-buttons">
+            <a href='#' class="control" id='pause'>
+                <img class="fas fa-play" src="img/play-solid-purple.svg" width='13' alt="play-pause-icon">
+            </a>
+            <a class="control" id='stop'>
+                <i class="fas fa-undo-alt"></i>
+            </a>
+            <a href='#' class="control" id='back'>
+                <i class="fas fa-fast-backward"></i>
+            </a>
+            <a href='#' class="control" id='next'>
+                <i class="fas fa-forward"></i>
+            </a>
+
+            <a href='#' class="control" id='expand'>
+                <i class="fas fa-expand"></i>
+            </a>
+            
+            <div id="porcent"></div>
+            <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)"
+            onchange="SetVolume(this.value)"></input>
+        </div>
+    </div>
+</body>
+<script src='js/app.js'></script>
+</html>
